@@ -1,0 +1,85 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  Techguns Core (techguns-1.12.2-2.0.2.0_pre3.2.jar)
+  TLSkinCapeHookLoader (tlskincape1.12.2-1.4.jar)
+  ObfuscatePlugin (obfuscate-0.4.2-1.12.2.jar)
+Contact their authors BEFORE contacting forge
+
+// Don't do that.
+
+Time: 24.02.21 15:37
+Description: Exception in server tick loop
+
+Missing Mods:
+	unknown : need any: have missing
+
+net.minecraftforge.fml.common.MissingModsException: Mod galacticraftcore (Galacticraft Core) requires [micdoodlecore]
+	at net.minecraftforge.fml.common.Loader.sortModList(Loader.java:266)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:572)
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:98)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:333)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:125)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:486)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_265, AdoptOpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), AdoptOpenJDK
+	Memory: 7883968008 bytes (7518 MB) / 8589934592 bytes (8192 MB) up to 8589934592 bytes (8192 MB)
+	JVM Flags: 20 total; -Xms8G -Xmx8G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2854 31 mods loaded, 31 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                         | Version             | Source                                        | Signature                                |
+	|:----- |:-------------------------- |:------------------- |:--------------------------------------------- |:---------------------------------------- |
+	| L     | minecraft                  | 1.12.2              | minecraft.jar                                 | None                                     |
+	| L     | mcp                        | 9.42                | minecraft.jar                                 | None                                     |
+	| L     | FML                        | 8.0.99.99           | forge-1.12.2-14.23.5.2854.jar                 | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| L     | forge                      | 14.23.5.2854        | forge-1.12.2-14.23.5.2854.jar                 | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| L     | obfuscate                  | 0.4.2               | minecraft.jar                                 | None                                     |
+	| L     | techguns_core              | 1.12.2-1.0          | minecraft.jar                                 | None                                     |
+	| L     | antiqueatlas               | 4.6.3               | antiqueatlas-1.12.2-4.6.3.jar                 | None                                     |
+	| L     | backpack                   | 3.0.2               | backpack-3.0.2-1.12.2.jar                     | None                                     |
+	| L     | biomesoplenty              | 7.0.1.2444          | BiomesOPlenty-1.12.2-7.0.1.2444-universal.jar | None                                     |
+	| L     | bookshelf                  | 2.3.590             | Bookshelf-1.12.2-2.3.590.jar                  | None                                     |
+	| L     | extendedrenderer           | v1.0                | coroutil-1.12.1-1.2.37.jar                    | None                                     |
+	| L     | coroutil                   | 1.12.1-1.2.37       | coroutil-1.12.1-1.2.37.jar                    | None                                     |
+	| L     | configmod                  | v1.0                | coroutil-1.12.1-1.2.37.jar                    | None                                     |
+	| L     | cfm                        | 6.3.1               | furniture-6.3.1-1.12.2.jar                    | None                                     |
+	| L     | galacticraftplanets        | 4.0.2.281           | Galacticraft-Planets-1.12.2-4.0.2.281.jar     | None                                     |
+	| L     | galacticraftcore           | 4.0.2.280           | GalacticraftCore-1.12.2-4.0.2.280.jar         | None                                     |
+	| L     | cgm                        | 0.15.3              | guns-0.15.3-1.12.2.jar                        | None                                     |
+	| L     | waila                      | 1.8.26              | Hwyla-1.8.26-B41_1.12.2.jar                   | None                                     |
+	| L     | ic2                        | 2.8.221-ex112       | industrialcraft-2-2.8.221-ex112.jar           | None                                     |
+	| L     | jei                        | 4.16.1.302          | jei_1.12.2-4.16.1.302.jar                     | None                                     |
+	| L     | lostcities                 | 2.0.22              | lostcities-1.12-2.0.22.jar                    | None                                     |
+	| L     | lycanitesmobs              | 2.0.7.2 - MC 1.12.2 | lycanitesmobs-1.12.2-2.0.7.2.jar              | None                                     |
+	| L     | patchouli                  | 1.0-23.6            | Patchouli-1.0-23.6.jar                        | None                                     |
+	| L     | primal                     | 0.6.105             | PrimalCore-1.12.2-0.6.105.jar                 | None                                     |
+	| L     | tardis                     | 0.1.4A              | tardis-0.1.4A.jar                             | None                                     |
+	| L     | techguns                   | 2.0.2.0             | techguns-1.12.2-2.0.2.0_pre3.2.jar            | None                                     |
+	| L     | tlauncher_custom_cape_skin | 1.4                 | tlskincape1.12.2-1.4.jar                      | None                                     |
+	| L     | toughasnails               | 3.1.0.141           | ToughAsNails-1.12.2-3.1.0.141-universal.jar   | None                                     |
+	| L     | vehicle                    | 0.44.1              | vehicle-mod-0.44.1-1.12.2.jar                 | None                                     |
+	| L     | wawla                      | 2.6.275             | Wawla-1.12.2-2.6.275.jar                      | None                                     |
+	| L     | weather2                   | 1.12.1-2.6.12       | weather2-1.12.1-2.6.12.jar                    | None                                     |
+
+	Loaded coremods (and transformers): 
+Techguns Core (techguns-1.12.2-2.0.2.0_pre3.2.jar)
+  techguns.core.TechgunsASMTransformer
+TLSkinCapeHookLoader (tlskincape1.12.2-1.4.jar)
+  gloomyfolken.hooklib.minecraft.PrimaryClassTransformer
+ObfuscatePlugin (obfuscate-0.4.2-1.12.2.jar)
+  com.mrcrayfish.obfuscate.asm.ObfuscateTransformer
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)
